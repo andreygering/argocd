@@ -1,20 +1,6 @@
 pipeline {
     agent any
     
-    parameters {
-        string defaultValue: '500', name: 'INTERVAL'
-    }
-    
-    
-    stages {
-        
-        
-        stage('CREATE ENV') {
-            steps {
-               sh "echo $ID >> .env"
-               sh "echo $ACCESS >> .env"
-            }
-        }
     
         stage('GET SCM') {
             steps {
